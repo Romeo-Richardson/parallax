@@ -41,6 +41,8 @@ const CarouselSection = (): React.ReactNode => {
     Encryption, Middleware Protected Routes, and Optimistic Updates from
     React Query.`,
     projectImage: kanbanImage,
+    projectDemo: "https://socialize-wheat.vercel.app/",
+    projectCode: "https://github.com/Romeo-Richardson/socialize",
     guestEmail: "guest@email.com",
     guestPassword: "#guest123",
     skillImages: [
@@ -68,6 +70,8 @@ const CarouselSection = (): React.ReactNode => {
     Password Encryption, JWT Session, Middleware Protected Routes, and
     Optimistic Updates from React Query.`,
     projectImage: socializeImage,
+    projectDemo: "https://kanban-romeo-richardson.vercel.app/",
+    projectCode: "https://github.com/Romeo-Richardson/kanban",
     guestEmail: "guest@email.com",
     guestPassword: "#guest123",
     skillImages: [
@@ -122,6 +126,8 @@ const CarouselSection = (): React.ReactNode => {
           projectDescription={kanbanData.projectDescription}
           projectDetails={kanbanData.projectDetails}
           projectImage={kanbanData.projectImage}
+          projectDemo={kanbanData.projectDemo}
+          projectCode={kanbanData.projectCode}
           guestEmail={kanbanData.guestEmail}
           guestPassword={kanbanData.guestPassword}
           skillImages={kanbanData.skillImages}
@@ -134,6 +140,8 @@ const CarouselSection = (): React.ReactNode => {
           projectDescription={socializeData.projectDescription}
           projectDetails={socializeData.projectDetails}
           projectImage={socializeData.projectImage}
+          projectDemo={socializeData.projectDemo}
+          projectCode={socializeData.projectCode}
           guestEmail={socializeData.guestEmail}
           guestPassword={socializeData.guestPassword}
           skillImages={socializeData.skillImages}

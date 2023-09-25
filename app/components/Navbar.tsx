@@ -26,11 +26,8 @@ const Navbar = (): React.ReactNode => {
       <div className=" h-[85%] flex items-center gap-6">
         {navData.map((item, key: number) => {
           return (
-            <a href={item.link}>
-              <div
-                key={key}
-                className=" flex h-full items-center justify-center hover:border-t-[4px] hover:cursor-pointer hover:border-white"
-              >
+            <a href={item.link} key={key}>
+              <div className=" flex h-full items-center justify-center hover:border-t-[4px] hover:cursor-pointer hover:border-white">
                 <p>{item.name}</p>
               </div>
             </a>

@@ -19,6 +19,8 @@ export type props = {
   projectDescription: string;
   projectDetails: string;
   projectImage: StaticImageData;
+  projectCode: string;
+  projectDemo: string;
   guestEmail: string;
   guestPassword: string;
   skillImages: StaticImageData[];
@@ -30,6 +32,8 @@ const Projects = ({
   projectDescription,
   projectDetails,
   projectImage,
+  projectCode,
+  projectDemo,
   guestEmail,
   guestPassword,
   skillImages,
@@ -69,16 +73,25 @@ const Projects = ({
               <p className="text-sm">
                 <strong>Guest password:</strong> {guestPassword}
               </p>
+              <div className=" w-full flex gap-4">
+                <a className="text-sm underline" href={projectDemo}>
+                  <strong>Demo</strong>
+                </a>
+                <a className="text-sm underline" href={projectCode}>
+                  <strong>Source Code</strong>
+                </a>
+              </div>
             </div>
           </div>
           <p>{projectDetails}</p>
           <div className="absolute bottom-5 left-0 w-full h-[50px] p-2 bg-white justify-center flex items-center gap-4">
-            {skillImages.map((img) => {
+            {skillImages.map((img, key) => {
               return (
                 <Image
                   alt="skill icon"
                   className="h-[50px] w-[50px] object-scale-down"
                   src={img}
+                  key={key}
                 ></Image>
               );
             })}

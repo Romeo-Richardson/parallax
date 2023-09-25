@@ -70,7 +70,7 @@ const AboutMe = (): React.ReactNode => {
           </div>
           <div className=" h-full w-1/2 flex flex-col p-6 text- items-start justify-between">
             <p className=" text-5xl font-extrabold">HELLO</p>
-            <p className=" font-bold">Here's who I am & what I do.</p>
+            <p className=" font-bold">{`Here's who I am & what I do.`}</p>
             <div className="flex gap-2">
               <button className=" p-2 bg-[#4cc9f0] rounded-lg text-white hover:scale-110 duration-200">
                 Resume
@@ -80,12 +80,11 @@ const AboutMe = (): React.ReactNode => {
               </button>
             </div>
             <p>
-              {" "}
-              Hey there, my name is Romeo and I'm a fullstack web developer.
+              {`Hey there, my name is Romeo and I'm a fullstack web developer.
               Since early highschool I've had a burning passion for coding and
               technology. I love creating things, solving problems, learning,
               and the satisfaction of completing something that I can be proud
-              of and others can enjoy.
+              of and others can enjoy.`}
             </p>
           </div>
         </div>
