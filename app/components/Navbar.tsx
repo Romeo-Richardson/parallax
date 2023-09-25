@@ -1,0 +1,44 @@
+import React from "react";
+
+type navItem = {
+  name: string;
+  link: string;
+};
+
+const Navbar = (): React.ReactNode => {
+  const navData: navItem[] = [
+    {
+      name: "Source code",
+      link: "",
+    },
+    {
+      name: "Resume",
+      link: "",
+    },
+    {
+      name: "Github",
+      link: "",
+    },
+  ];
+  return (
+    <div className=" h-16 w-full text-white bg-[#adb5bd] border-b-white border-b-4 absolute top-0 z-10 flex items-center px-6">
+      <p className="grow font-bold text-2xl">Romeo Richardson.</p>
+      <div className=" h-[85%] flex items-center gap-6">
+        {navData.map((item, key: number) => {
+          return (
+            <a href="">
+              <div
+                key={key}
+                className=" flex h-full items-center justify-center hover:border-t-[4px] hover:cursor-pointer hover:border-white"
+              >
+                <p>{item.name}</p>
+              </div>
+            </a>
+          );
+        })}
+      </div>
+    </div>
+  );
+};
+
+export default Navbar;
