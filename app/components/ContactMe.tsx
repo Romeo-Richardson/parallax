@@ -54,7 +54,7 @@ const ContactMe = (): React.ReactNode => {
             ></input>
           </div>
           <div className=" flex flex-col gap-2">
-            <p className=" font-bold">First Name</p>
+            <p className=" font-bold">Last Name</p>
             <input
               name="lastName"
               placeholder="Last Name"
