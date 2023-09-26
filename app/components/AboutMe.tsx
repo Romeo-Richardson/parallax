@@ -65,9 +65,8 @@ const AboutMe = ({ navRef }: props): React.ReactNode => {
             <div className=" h-[12%] w-full bg-white absolute bottom-0 flex items-center justify-center gap-6">
               {socials.map((social: social, key: number) => {
                 return (
-                  <a href={social.link}>
+                  <a href={social.link} key={key}>
                     <Image
-                      key={key}
                       className=" hover:scale-110 duration-200 hover:cursor-pointer"
                       height={25}
                       width={25}
