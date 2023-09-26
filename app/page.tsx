@@ -1,15 +1,22 @@
 "use client";
-import { Parallax, ParallaxLayer } from "@react-spring/parallax";
+import {
+  IParallax,
+  IParallaxLayer,
+  Parallax,
+  ParallaxLayer,
+} from "@react-spring/parallax";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import AboutMe from "./components/AboutMe";
 import Skills from "./components/Skills";
 import CarouselSection from "./components/CarouselSection";
 import Footer from "./components/Footer";
+import { useRef } from "react";
 
 export default function Home() {
+  const ref = useRef<IParallax | null>(null);
   return (
-    <Parallax pages={2}>
+    <Parallax pages={2} ref={ref}>
       <Navbar></Navbar>
       <ParallaxLayer
         speed={0}
@@ -20,7 +27,7 @@ export default function Home() {
         }}
       ></ParallaxLayer>
       <ParallaxLayer offset={0} factor={1} speed={1.5} className=" bg-none">
-        <Hero></Hero>
+        <Hero navRef={ref}></Hero>
       </ParallaxLayer>
       <ParallaxLayer
         offset={0.99}
@@ -28,7 +35,7 @@ export default function Home() {
         speed={1.7}
         className=" bg-[#adb5bd] mt-[1vh]"
       >
-        <AboutMe></AboutMe>
+        <AboutMe navRef={ref}></AboutMe>
         <CarouselSection></CarouselSection>{" "}
       </ParallaxLayer>
       <Footer></Footer>

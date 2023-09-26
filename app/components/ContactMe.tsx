@@ -1,12 +1,16 @@
 "use client";
 
 import axios from "axios";
-import React from "react";
+import React, { useRef } from "react";
 import toast from "react-hot-toast";
 import { useInView } from "react-intersection-observer";
 
 const ContactMe = (): React.ReactNode => {
   const { ref: p1Ref, inView: p1View, entry: p1Style } = useInView();
+
+  const nameRef = useRef<HTMLInputElement | null>(null);
+  const lastNameRef = useRef<HTMLInputElement | null>(null);
+  const inquiryRef = useRef<HTMLTextAreaElement | null>(null);
 
   const postInquiry = async (formData: FormData) => {
     const firstName = formData.get("firstName");
@@ -33,10 +37,15 @@ const ContactMe = (): React.ReactNode => {
         </p>
       </div>
       <form
-        className=" h-[80vh] w-[700px] bg-white flex flex-col gap-6 p-12 mt-[-24px]"
+        className=" h-[80vh] max-h-[760px] w-[700px] bg-white flex flex-col gap-6 p-12 mt-[-24px]"
         onSubmit={async (e) => {
           e.preventDefault();
           const formData = new FormData(e.currentTarget);
+          if (nameRef.current && lastNameRef.current && inquiryRef.current) {
+            nameRef.current.value = "";
+            lastNameRef.current.value = "";
+            inquiryRef.current.value = "";
+          }
           await toast.promise(postInquiry(formData), {
             success: "Inquiry sent",
             loading: "Sending inquiry",
@@ -51,6 +60,8 @@ const ContactMe = (): React.ReactNode => {
               name="firstName"
               placeholder="First Name"
               className="border-slate-400 border-[1px] p-2 rounded-sm"
+              ref={nameRef}
+              required
             ></input>
           </div>
           <div className=" flex flex-col gap-2">
@@ -59,6 +70,8 @@ const ContactMe = (): React.ReactNode => {
               name="lastName"
               placeholder="Last Name"
               className="border-slate-400 border-[1px] p-2 rounded-sm"
+              ref={lastNameRef}
+              required
             ></input>
           </div>
         </div>
@@ -67,6 +80,8 @@ const ContactMe = (): React.ReactNode => {
           <textarea
             name="message"
             className="border-slate-400 border-[1px] p-2 rounded-sm h-full resize-none"
+            ref={inquiryRef}
+            required
           ></textarea>
         </div>
         <button className=" p-2 bg-[#4cc9f0] text-white" type="submit">

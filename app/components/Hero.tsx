@@ -1,9 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { MutableRefObject, useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import arrow from "../assets/down-arrow.png";
 import Image from "next/image";
+import { IParallax, IParallaxLayer } from "@react-spring/parallax";
 
-const Hero = (): React.ReactNode => {
+type props = {
+  navRef: MutableRefObject<IParallax | null>;
+};
+
+const Hero = ({ navRef }: props): React.ReactNode => {
   const { ref: p1Ref, inView: p1View, entry: p1Style } = useInView();
   const [introText, setIntroText] = useState<string | null>(
     "opacity-0 blur-sm translate-x-[-64px]"
@@ -29,7 +34,12 @@ const Hero = (): React.ReactNode => {
         <strong>To a fresh new start.</strong>
       </p>
       <>
-        <div className="flex flex-col gap-2 absolute bottom-6 hover:cursor-pointer">
+        <div
+          className="flex flex-col gap-2 absolute bottom-6 hover:cursor-pointer"
+          onClick={() => {
+            navRef.current?.scrollTo(0.371);
+          }}
+        >
           <Image
             height={50}
             width={75}

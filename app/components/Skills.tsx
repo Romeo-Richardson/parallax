@@ -60,7 +60,7 @@ const Skills = () => {
           <strong>Skills & Technologies</strong>
         </p>
       </div>
-      <div className=" min-h-screen w-[700px] bg-white flex flex-col py-4 pl-8 justify-between">
+      <div className=" h-screen max-h-[760px] w-[700px] bg-white flex flex-col py-4 pl-8 justify-between">
         {skillData.map((section, key) => {
           return (
             <React.Fragment key={key}>

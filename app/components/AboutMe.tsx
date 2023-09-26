@@ -1,31 +1,40 @@
-import React from "react";
+import React, { MutableRefObject } from "react";
 import me from "../assets/20220703_155405237_iOS.jpg";
 import Image, { StaticImageData } from "next/image";
 import twitter from "../assets/twitter-sign.png";
 import github from "../assets/github.png";
 import linkedin from "../assets/linkedin.png";
 import { useInView } from "react-intersection-observer";
+import { IParallax } from "@react-spring/parallax";
 
 type social = {
   icon: StaticImageData;
   alt: string;
+  link: string;
 };
 
-const AboutMe = (): React.ReactNode => {
+type props = {
+  navRef: MutableRefObject<IParallax | null>;
+};
+
+const AboutMe = ({ navRef }: props): React.ReactNode => {
   const { ref: p1Ref, inView: p1View, entry: p1Style } = useInView();
 
   const socials: social[] = [
     {
       icon: twitter,
       alt: "Twitter Icon",
+      link: "https://twitter.com/RomeoDoesJS",
     },
     {
       icon: linkedin,
       alt: "Linkedin icon",
+      link: "https://www.linkedin.com/in/romeo-richardson-4a5516247/",
     },
     {
       icon: github,
       alt: "Github icon",
+      link: "https://github.com/Romeo-Richardson",
     },
   ];
 
@@ -56,14 +65,16 @@ const AboutMe = (): React.ReactNode => {
             <div className=" h-[12%] w-full bg-white absolute bottom-0 flex items-center justify-center gap-6">
               {socials.map((social: social, key: number) => {
                 return (
-                  <Image
-                    key={key}
-                    className=" hover:scale-110 duration-200 hover:cursor-pointer"
-                    height={25}
-                    width={25}
-                    alt={social.alt}
-                    src={social.icon}
-                  ></Image>
+                  <a href={social.link}>
+                    <Image
+                      key={key}
+                      className=" hover:scale-110 duration-200 hover:cursor-pointer"
+                      height={25}
+                      width={25}
+                      alt={social.alt}
+                      src={social.icon}
+                    ></Image>
+                  </a>
                 );
               })}
             </div>
@@ -72,10 +83,17 @@ const AboutMe = (): React.ReactNode => {
             <p className=" text-5xl font-extrabold">HELLO</p>
             <p className=" font-bold">{`Here's who I am & what I do.`}</p>
             <div className="flex gap-2">
-              <button className=" p-2 bg-[#4cc9f0] rounded-lg text-white hover:scale-110 duration-200">
-                Resume
-              </button>
-              <button className=" p-2 rounded-lg border-black border-[1px] hover:scale-110 duration-200">
+              <a href="https://drive.google.com/file/d/1WCP1sLqnxcCgX1IJWbKJn0HQlHAxB1ke/view?usp=sharing">
+                <button className=" p-2 bg-[#4cc9f0] rounded-lg text-white hover:scale-110 duration-200">
+                  Resume
+                </button>
+              </a>
+              <button
+                className=" p-2 rounded-lg border-black border-[1px] hover:scale-110 duration-200"
+                onClick={() => {
+                  navRef.current?.scrollTo(0.857);
+                }}
+              >
                 Projects
               </button>
             </div>

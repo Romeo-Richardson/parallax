@@ -52,7 +52,7 @@ const Projects = ({
           <strong>{headerName}</strong>
         </p>
       </div>
-      <div className=" min-h-screen w-[700px] bg-white  flex flex-col">
+      <div className=" h-screen max-h-[760px] w-[700px] bg-white  flex flex-col">
         <div className=" w-full h-[275px] ">
           <Image
             alt="Project Image"
@@ -60,7 +60,7 @@ const Projects = ({
             className="h-full w-full"
           ></Image>
         </div>
-        <div className=" grow w-full bg-white px-3 pt-4 flex flex-col relative gap-4">
+        <div className=" grow w-full bg-white px-3 pt-4 flex flex-col relative gap-10">
           <div className="flex justify-between w-full">
             <div>
               <p className=" font-bold">{projectName}</p>

@@ -13,7 +13,7 @@ const Navbar = (): React.ReactNode => {
     },
     {
       name: "Resume",
-      link: "'https://1drv.ms/w/s!AteB6oDGc_2mgZoOjqqeqWwGbYNTKQ?e=cB47rH",
+      link: "https://drive.google.com/file/d/1WCP1sLqnxcCgX1IJWbKJn0HQlHAxB1ke/view?usp=sharing",
     },
     {
       name: "Github",

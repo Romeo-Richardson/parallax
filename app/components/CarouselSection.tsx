@@ -36,13 +36,13 @@ const CarouselSection = (): React.ReactNode => {
     operations. This is a fullstack application where users can log in or
     logout to save their progress. Users can create, post, update and
     delete tasks, boards and columns. Everything is managed and saved to
-    a MongoDB database using custom REST API's and Prisma ORM. Other
+    a MongoDB database using custom RESTful API's and Prisma ORM. Other
     features include Drag & Drop, JWT Session, Email Auth, Password
     Encryption, Middleware Protected Routes, and Optimistic Updates from
     React Query.`,
     projectImage: kanbanImage,
-    projectDemo: "https://socialize-wheat.vercel.app/",
-    projectCode: "https://github.com/Romeo-Richardson/socialize",
+    projectDemo: "https://kanban-romeo-richardson.vercel.app/",
+    projectCode: "https://github.com/Romeo-Richardson/kanban",
     guestEmail: "guest@email.com",
     guestPassword: "#guest123",
     skillImages: [
@@ -66,12 +66,12 @@ const CarouselSection = (): React.ReactNode => {
     relationships. This is a fullstack application where users can
     login, logout, post messages, reply to messages, add friends, and
     direct message all in Real Time using Pusher. Everything is managed and saved to a Postgres
-    database using custom REST API's and Prisma ORM. Other features include an AI powered Chatbot,
+    database using custom RESTful API's and Prisma ORM. Other features include an AI powered Chatbot,
     Password Encryption, JWT Session, Middleware Protected Routes, and
     Optimistic Updates from React Query.`,
     projectImage: socializeImage,
-    projectDemo: "https://kanban-romeo-richardson.vercel.app/",
-    projectCode: "https://github.com/Romeo-Richardson/kanban",
+    projectDemo: "https://socialize-wheat.vercel.app/",
+    projectCode: "https://github.com/Romeo-Richardson/socialize",
     guestEmail: "guest@email.com",
     guestPassword: "#guest123",
     skillImages: [
