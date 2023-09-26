@@ -36,7 +36,7 @@ const CarouselSection = (): React.ReactNode => {
     operations. This is a fullstack application where users can log in or
     logout to save their progress. Users can create, post, update and
     delete tasks, boards and columns. Everything is managed and saved to
-    a MongoDB database using custom RESTful API's and Prisma ORM. Other
+    a MongoDB database using a custom RESTful API and Prisma ORM. Other
     features include Drag & Drop, JWT Session, Email Auth, Password
     Encryption, Middleware Protected Routes, and Optimistic Updates from
     React Query.`,
@@ -66,7 +66,7 @@ const CarouselSection = (): React.ReactNode => {
     relationships. This is a fullstack application where users can
     login, logout, post messages, reply to messages, add friends, and
     direct message all in Real Time using Pusher. Everything is managed and saved to a Postgres
-    database using custom RESTful API's and Prisma ORM. Other features include an AI powered Chatbot,
+    database using a custom RESTful API and Prisma ORM. Other features include an AI powered Chatbot,
     Password Encryption, JWT Session, Middleware Protected Routes, and
     Optimistic Updates from React Query.`,
     projectImage: socializeImage,
