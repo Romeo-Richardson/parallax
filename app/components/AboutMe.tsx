@@ -1,5 +1,5 @@
 import React, { MutableRefObject } from "react";
-import me from "../assets/20220703_155405237_iOS.jpg";
+import me from "../assets/cropped-me.jpg";
 import Image, { StaticImageData } from "next/image";
 import twitter from "../assets/twitter-sign.png";
 import github from "../assets/github.png";
