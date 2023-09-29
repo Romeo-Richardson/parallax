@@ -26,13 +26,13 @@ export default function Home() {
           backgroundSize: "cover",
         }}
       ></ParallaxLayer>
-      <ParallaxLayer offset={0} factor={1} speed={1.5} className=" bg-none">
+      <ParallaxLayer offset={0} factor={1} speed={1.2} className=" bg-none">
         <Hero navRef={ref}></Hero>
       </ParallaxLayer>
       <ParallaxLayer
         offset={0.99}
         factor={1}
-        speed={1.7}
+        speed={1.6}
         className=" bg-[#adb5bd] mt-[1vh]"
       >
         <AboutMe navRef={ref}></AboutMe>
