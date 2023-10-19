@@ -65,7 +65,12 @@ const AboutMe = ({ navRef }: props): React.ReactNode => {
             <div className=" h-[12%] w-full bg-white absolute bottom-0 flex items-center justify-center gap-6">
               {socials.map((social: social, key: number) => {
                 return (
-                  <a href={social.link} key={key}>
+                  <a
+                    onClick={() => {
+                      window.open(social.link, "_blank");
+                    }}
+                    key={key}
+                  >
                     <Image
                       className=" hover:scale-110 duration-200 hover:cursor-pointer"
                       height={25}
@@ -82,7 +87,14 @@ const AboutMe = ({ navRef }: props): React.ReactNode => {
             <p className=" text-5xl font-extrabold">HELLO</p>
             <p className=" font-bold">{`Here's who I am & what I do.`}</p>
             <div className="flex gap-2">
-              <a href="https://drive.google.com/file/d/1WCP1sLqnxcCgX1IJWbKJn0HQlHAxB1ke/view?usp=sharing">
+              <a
+                onClick={() => {
+                  window.open(
+                    "https://drive.google.com/file/d/1WCP1sLqnxcCgX1IJWbKJn0HQlHAxB1ke/view?usp=sharing",
+                    "_blank"
+                  );
+                }}
+              >
                 <button className=" p-2 bg-[#4cc9f0] rounded-lg text-white hover:scale-110 duration-200">
                   Resume
                 </button>

@@ -74,10 +74,20 @@ const Projects = ({
                 <strong>Guest password:</strong> {guestPassword}
               </p>
               <div className=" w-full flex gap-4">
-                <a className="text-sm underline" href={projectDemo}>
+                <a
+                  className="text-sm underline"
+                  onClick={() => {
+                    window.open(projectDemo, "_blank");
+                  }}
+                >
                   <strong>Demo</strong>
                 </a>
-                <a className="text-sm underline" href={projectCode}>
+                <a
+                  className="text-sm underline"
+                  onClick={() => {
+                    window.open(projectCode, "_blank");
+                  }}
+                >
                   <strong>Source Code</strong>
                 </a>
               </div>
