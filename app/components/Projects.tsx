@@ -75,7 +75,7 @@ const Projects = ({
               </p>
               <div className=" w-full flex gap-4">
                 <a
-                  className="text-sm underline"
+                  className="text-sm underline hover:cursor-pointer"
                   onClick={() => {
                     window.open(projectDemo, "_blank");
                   }}
@@ -83,7 +83,7 @@ const Projects = ({
                   <strong>Demo</strong>
                 </a>
                 <a
-                  className="text-sm underline"
+                  className="text-sm underline hover:cursor-pointer"
                   onClick={() => {
                     window.open(projectCode, "_blank");
                   }}

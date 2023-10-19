@@ -30,6 +30,7 @@ const Navbar = (): React.ReactNode => {
               onClick={() => {
                 window.open(item.link, "_blank");
               }}
+              className="hover:cursor-pointer"
               key={key}
             >
               <div className=" flex h-full items-center justify-center hover:border-t-[4px] hover:cursor-pointer hover:border-white">

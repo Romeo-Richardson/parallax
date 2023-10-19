@@ -69,6 +69,7 @@ const AboutMe = ({ navRef }: props): React.ReactNode => {
                     onClick={() => {
                       window.open(social.link, "_blank");
                     }}
+                    className="hover:cursor-pointer"
                     key={key}
                   >
                     <Image
