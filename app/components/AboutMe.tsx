@@ -91,7 +91,7 @@ const AboutMe = ({ navRef }: props): React.ReactNode => {
               <a
                 onClick={() => {
                   window.open(
-                    "https://drive.google.com/file/d/1WCP1sLqnxcCgX1IJWbKJn0HQlHAxB1ke/view?usp=sharing",
+                    "https://drive.google.com/file/d/1PxOl-Ot6wjQUiIUCqGzkAi8-LnJ5I8Hx/view?usp=share_link",
                     "_blank"
                   );
                 }}
