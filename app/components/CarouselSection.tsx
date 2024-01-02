@@ -23,6 +23,7 @@ import kanbanImage from "../assets/Kanban (1).png";
 import socializeImage from "../assets/Create Next App (3).png";
 import pusher from "../assets/pusher.png";
 import RabbitImage from "../assets/rabbit.png";
+import AWS from "../assets/aws-logo.png";
 
 const CarouselSection = (): React.ReactNode => {
   const [index, setIndex] = useState<number>(0);
@@ -45,6 +46,7 @@ const CarouselSection = (): React.ReactNode => {
       resend,
       remail,
       mongodb,
+      AWS,
     ],
   };
 
