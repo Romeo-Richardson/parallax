@@ -21,8 +21,8 @@ export type props = {
   projectImage: StaticImageData;
   projectCode: string;
   projectDemo: string;
-  guestEmail: string;
-  guestPassword: string;
+  guestEmail?: string;
+  guestPassword?: string;
   skillImages: StaticImageData[];
 };
 

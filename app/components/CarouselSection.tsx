@@ -22,11 +22,31 @@ import ContactMe from "./ContactMe";
 import kanbanImage from "../assets/Kanban (1).png";
 import socializeImage from "../assets/Create Next App (3).png";
 import pusher from "../assets/pusher.png";
+import RabbitImage from "../assets/rabbit.png";
 
 const CarouselSection = (): React.ReactNode => {
   const [index, setIndex] = useState<number>(0);
   const [leftStatus, setLeftStatus] = useState<boolean>(false);
   const [rightStatus, setRightStatus] = useState<boolean>(false);
+
+  const rabbitData: props = {
+    headerName: "Rabbit Tech",
+    projectName: "Rabbit",
+    projectDescription: "Company landing page",
+    projectDetails: `Inspired by rabbit.tech, this is a fully server side rendered project using NextJS Server Components. Also contains automated email response using Resend + React Email, so the waitlist is functional. Also saves the inputted email into a MongoDB database using Prisma ORM. All video assets are hosted on AWS S3.`,
+    projectImage: RabbitImage,
+    projectDemo: "https://rabbit-tech-5ydy.vercel.app/",
+    projectCode: "https://github.com/Romeo-Richardson/rabbit-tech",
+    skillImages: [
+      typescript,
+      nextjs,
+      tailwind,
+      prisma,
+      resend,
+      remail,
+      mongodb,
+    ],
+  };
 
   const kanbanData: props = {
     headerName: "Kanban Board",
@@ -89,9 +109,9 @@ const CarouselSection = (): React.ReactNode => {
 
   useEffect(() => {
     console.log(index);
-    if (index === 3) {
+    if (index === 4) {
       setRightStatus(true);
-    } else if (index < 3) {
+    } else if (index < 4) {
       setRightStatus(false);
     }
 
@@ -119,35 +139,10 @@ const CarouselSection = (): React.ReactNode => {
         </button>
       </div>
       {index === 0 && <Skills></Skills>}
-      {index === 1 && (
-        <Projects
-          headerName={kanbanData.headerName}
-          projectName={kanbanData.projectName}
-          projectDescription={kanbanData.projectDescription}
-          projectDetails={kanbanData.projectDetails}
-          projectImage={kanbanData.projectImage}
-          projectDemo={kanbanData.projectDemo}
-          projectCode={kanbanData.projectCode}
-          guestEmail={kanbanData.guestEmail}
-          guestPassword={kanbanData.guestPassword}
-          skillImages={kanbanData.skillImages}
-        ></Projects>
-      )}
-      {index === 2 && (
-        <Projects
-          headerName={socializeData.headerName}
-          projectName={socializeData.projectName}
-          projectDescription={socializeData.projectDescription}
-          projectDetails={socializeData.projectDetails}
-          projectImage={socializeData.projectImage}
-          projectDemo={socializeData.projectDemo}
-          projectCode={socializeData.projectCode}
-          guestEmail={socializeData.guestEmail}
-          guestPassword={socializeData.guestPassword}
-          skillImages={socializeData.skillImages}
-        ></Projects>
-      )}
-      {index === 3 && <ContactMe></ContactMe>}
+      {index === 1 && <Projects {...rabbitData}></Projects>}
+      {index === 2 && <Projects {...kanbanData}></Projects>}
+      {index === 3 && <Projects {...socializeData}></Projects>}
+      {index === 4 && <ContactMe></ContactMe>}
       <div className=" h-screen w-[100px] flex justify-center items-center">
         <button disabled={rightStatus}>
           <Image
