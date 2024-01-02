@@ -31,8 +31,8 @@ const CarouselSection = (): React.ReactNode => {
   const [rightStatus, setRightStatus] = useState<boolean>(false);
 
   const rabbitData: props = {
-    headerName: "Rabbit Tech",
-    projectName: "Rabbit",
+    headerName: "Rabbit",
+    projectName: "Rabbit Tech(Pending Responsiveness)",
     projectDescription: "Company landing page",
     projectDetails: `Inspired by rabbit.tech, this is a fully server side rendered project using NextJS Server Components. Also contains automated email response using Resend + React Email, so the waitlist is functional. Also saves the inputted email into a MongoDB database using Prisma ORM. All video assets are hosted on AWS S3.`,
     projectImage: RabbitImage,
